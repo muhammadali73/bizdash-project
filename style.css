@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffff00;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.7s;
+}
+
+a:hover {
+    color: var(--primary-color) !important;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.part-1 h1 {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.part-1 h1 a {
+    color: var(--primary-color);
+}
+
+.part-2 {
+    display: flex;
+    gap: 15px;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+}
+
+.part-2 a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.part-2 span {
+    color: #fff;
+}
+
+.hero {
+    position: relative;
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.hero-head {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    top: 24%;
+    left: 6%;
+}
+
+.hero-head h1 {
+    background-color: var(--primary-color);
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    transform-origin: left;
+}
+
+.hero-head h1:nth-child(1) {
+    width: 27%;
+    font-size: 60px;
+}
+
+.hero-head h1:nth-child(2) {
+    font-size: 120px;
+    position: relative;
+    top: -10px;
+    left: 40px;
+}
+
+.hero-head h1:nth-child(3) {
+    width: 70%;
+    position: relative;
+    top: -15px;
+    left: 230px;
+    font-size: 70px;
+}
+
+.hero-serv {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    bottom: 5%;
+    left: 6%;
+    flex-wrap: wrap;
+}
+
+.check {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    bottom: 15%;
+    color: #A9A4A1;
+    left: 6%;
+    font-size: 16px;
+}
+
+.check:hover {
+    color: #A9A4A1 !important;
+}
+
+.hero-serv h1 {
+    background-color: var(--primary-color);
+    font-size: 30px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.hero-serv h1:hover {
+    background-color: #4A4A4C;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .part-1 h1 {
+        font-size: 45px;
+    }
+
+    .hero-head {
+        top: 28%;
+        left: 8%;
+    }
+
+    .hero-head h1:nth-child(1) {
+        width: 100%;
+        font-size: 50px;
+    }
+
+    .hero-head h1:nth-child(2) {
+        font-size: 100px;
+        top: -5px;
+        left: 20px;
+    }
+
+    .hero-head h1:nth-child(3) {
+        width: 100%;
+        top: -10px;
+        left: 40px;
+    }
+
+    .hero-serv {
+        bottom: 10%;
+    }
+
+    .check {
+        bottom: 18%;
+        font-size: 15px;
+    }
+
+    .hero-serv h1 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 850px) {
+    .hero-serv{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 20px;
+    }
+
+    .part-1 h1 {
+        font-size: 40px;
+    }
+
+    .part-2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hero-head {
+        top: 30%;
+        left: 10%;
+    }
+
+    .hero-head h1:nth-child(1) {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .hero-head h1:nth-child(2) {
+        font-size: 80px;
+        top: -5px;
+        left: 10px;
+    }
+
+    .hero-head h1:nth-child(3) {
+        width: 100%;
+        top: -5px;
+        left: 20px;
+    }
+
+    .hero-serv {
+        bottom: 15%;
+    }
+
+    .check {
+        bottom: 20%;
+        font-size: 14px;
+    }
+
+    .hero-serv h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    .part-1 h1 {
+        font-size: 35px;
+    }
+
+    .hero-head {
+        top: 35%;
+        left: 12%;
+    }
+
+    .hero-head h1:nth-child(1) {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .hero-head h1:nth-child(2) {
+        font-size: 60px;
+        top: -5px;
+        left: 5px;
+    }
+
+    .hero-head h1:nth-child(3) {
+        width: 100%;
+        top: -5px;
+        left: 10px;
+    }
+
+    .hero-serv {
+        bottom: 20%;
+    }
+
+    .check {
+        bottom: 25%;
+        font-size: 12px;
+    }
+
+    .hero-serv h1 {
+        font-size: 18px;
+    }
+}
