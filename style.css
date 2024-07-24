@@ -11,54 +11,45 @@
 a {
     text-decoration: none;
     transition: all 0.7s;
+    color: #fff !important;
 }
 
 a:hover {
     color: var(--primary-color) !important;
 }
 
-nav {
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 50px;
-    position: absolute;
+    position: fixed !important;
     width: 100%;
     top: 0;
-    z-index: 10;
-}
+    z-index: 999;
+    background-color: transparent !important;
+    padding: 20px 70px !important;
 
-.part-1 h1 {
-    font-family: "Bebas Neue", sans-serif !important;
+}
+.navbar-nav{
+    display: flex;
+    font-family: sans-serif;
+    gap: 10px;
+}
+.navbar-nav a{
+    font-size: 14px !important;
+}
+.navbar h1 a {
+    color: var(--primary-color) !important;
+    font-size: 50px;
+    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 50px;
-}
-
-.part-1 h1 a {
-    color: var(--primary-color);
-}
-
-.part-2 {
-    display: flex;
-    gap: 15px;
-    font-family: sans-serif;
-    flex-wrap: wrap;
-}
-
-.part-2 a {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.part-2 span {
-    color: #fff;
 }
 
 .hero {
     position: relative;
-    height: 110vh;
+    height: 115vh;
     width: 100%;
     overflow: hidden;
 }
@@ -95,6 +86,31 @@ nav {
     transform-origin: left;
 }
 
+.hero-text-1 {
+    width: 27% !important;
+    box-shadow: 0px 10px 5px !important;
+    z-index: 50 !important;
+    color: #000 !important;
+}
+
+.hero-text-2 {
+    font-size: 120px !important;
+    position: relative !important;
+    top: -10px !important;
+    box-shadow: 0px 10px 5px !important;
+    z-index: 25 !important;
+    left: 40px !important;
+    color: #000 !important;
+}
+
+.hero-text-3 {
+    width: 70% !important;
+    position: relative !important;
+    top: -15px !important;
+    left: 230px !important;
+    color: #000 !important;
+}
+
 .hero-head h1:nth-child(1) {
     width: 27%;
     font-size: 60px;
@@ -123,6 +139,14 @@ nav {
     bottom: 5%;
     left: 6%;
     flex-wrap: wrap;
+    padding: 0 20px;
+    color: #000 !important;
+}
+
+.serv-1,
+.serv-2 {
+    display: flex;
+    gap: 10px;
 }
 
 .check {
@@ -131,13 +155,14 @@ nav {
     display: flex;
     gap: 10px;
     bottom: 15%;
-    color: #A9A4A1;
+    color: #fff;
     left: 6%;
+    text-decoration: none;
     font-size: 16px;
 }
 
 .check:hover {
-    color: #A9A4A1 !important;
+    color: #fff !important;
 }
 
 .hero-serv h1 {
@@ -153,7 +178,57 @@ nav {
     cursor: pointer;
 }
 
-/* Media Queries for Responsive Design */
+/* Custom Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+    width: 5px;
+    /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+    /* Color of the scrollbar track (black) */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+    margin: 5px;
+    /* Add some space around the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffff0f;
+    /* Color of the scrollbar handle (yellow) */
+    border-radius: 10px;
+    /* Rounded corners for the handle */
+    border: 3px solid #000;
+    /* Border to ensure the rounding effect */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e6e600;
+    /* Slightly darker yellow when hovered */
+}
+
+/* Remove arrows */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    /* Width of the scrollbar */
+    scrollbar-color: #ffff0f #000;
+    /* Color of the handle and track */
+}
+
+body {
+    scrollbar-width: thin;
+    /* Adjust scrollbar width */
+    scrollbar-color: #ffff0f #000;
+    /* Handle and track color for Firefox */
+}
 
 @media (max-width: 1024px) {
     nav {
@@ -166,7 +241,7 @@ nav {
 
     .hero-head {
         top: 28%;
-        left: 8%;
+        left: 7%;
     }
 
     .hero-head h1:nth-child(1) {
@@ -187,7 +262,8 @@ nav {
     }
 
     .hero-serv {
-        bottom: 10%;
+        bottom: 3%;
+        padding: 0 40px;
     }
 
     .check {
@@ -199,11 +275,32 @@ nav {
         font-size: 25px;
     }
 }
-@media (max-width: 850px) {
-    .hero-serv{
-        width: 100%;
+@media (max-width:991px) {
+    .none{
+        display: none;
     }
 }
+@media (max-width: 850px) {
+    .hero-serv {
+        flex-direction: column;
+        width: 100%;
+        bottom: 0;
+        left: 1%;
+        padding: 0 40px;
+    }
+
+    .serv-1,
+    .serv-2 {
+        gap: 20px;
+    }
+
+    .hero-serv h1 {
+        width: 100%;
+        text-align: center;
+        height: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -222,8 +319,8 @@ nav {
     }
 
     .hero-head {
-        top: 30%;
-        left: 10%;
+        top: 26%;
+        left: 5%;
     }
 
     .hero-head h1:nth-child(1) {
@@ -244,7 +341,7 @@ nav {
     }
 
     .hero-serv {
-        bottom: 15%;
+        bottom: 2%;
     }
 
     .check {
@@ -257,9 +354,45 @@ nav {
     }
 }
 
+@media (max-width:580px) {
+    .hero{
+        height: 105vh;
+    }
+    .hero-head {
+        top: 17%;
+        left: 8%;
+    }
+    .hero-text-1{
+        font-size: 32px;
+        width: 21% !important;
+    }
+    .hero-text-2{
+        font-size: 90px !important;
+    }
+    .hero-text-3{
+        font-size: 50px !important;
+        width: 58% !important;
+    }
+
+    .hero-serv{
+        padding: 0 30px;   
+    }
+    .serv-1,
+    .serv-2 {
+        flex-direction: column;
+    }
+    .hero-serv h1{
+        font-size: 30px;
+        height: 45px;
+    }
+    .check{
+        top: 58%;
+    }
+}
+
 @media (max-width: 480px) {
     nav {
-        padding: 10px 15px;
+        padding: 10px 20px;
     }
 
     .part-1 h1 {
@@ -267,37 +400,68 @@ nav {
     }
 
     .hero-head {
-        top: 35%;
-        left: 12%;
+        top: 22%;
+        left: 6%;
     }
 
     .hero-head h1:nth-child(1) {
-        width: 100%;
-        font-size: 30px;
+        width: 30% !important;
+        font-size: 36px !important;
     }
 
     .hero-head h1:nth-child(2) {
-        font-size: 60px;
+        font-size: 55px !important;
         top: -5px;
-        left: 5px;
+        left: 40px !important;
     }
 
     .hero-head h1:nth-child(3) {
-        width: 100%;
+        width: 75% !important;
         top: -5px;
-        left: 10px;
+        left: 200px !important;
+        font-size: 40px !important;
     }
 
     .hero-serv {
-        bottom: 20%;
+        bottom: 0;
+        padding: 0 20px;
     }
 
     .check {
         bottom: 25%;
-        font-size: 12px;
+        font-size: 15px;
+    }
+}
+@media (max-width:380px) {
+    .hero{
+        height: 100vh;
+    }
+    .hero-head {
+        top: 22%;
+        left: 6%;
     }
 
-    .hero-serv h1 {
-        font-size: 18px;
+    .hero-head h1:nth-child(1) {
+        width: 33% !important;
+        font-size: 32px !important;
+    }
+
+    .hero-head h1:nth-child(2) {
+        font-size: 50px !important;
+        top: -5px;
+        left: 40px !important;
+    }
+
+    .hero-head h1:nth-child(3) {
+        width: 75% !important;
+        top: -5px;
+        left: 150px !important;
+        font-size: 35px !important;
+    }
+    .serv-2 h1:nth-child(1){
+        height: 80px;
+    }
+    .serv-2 h1:nth-child(2){
+        height: 80px;
     }
 }
