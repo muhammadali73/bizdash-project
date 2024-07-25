@@ -49,7 +49,7 @@ a:hover {
 
 .hero {
     position: relative;
-    height: 115vh;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -70,7 +70,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    top: 24%;
+    top: 30%;
     left: 6%;
 }
 
@@ -130,53 +130,6 @@ a:hover {
     left: 230px;
     font-size: 70px;
 }
-
-.hero-serv {
-    position: absolute;
-    z-index: 100;
-    display: flex;
-    gap: 10px;
-    bottom: 5%;
-    left: 6%;
-    padding: 0 20px;
-    color: #000 !important;
-}
-
-.serv-1,
-.serv-2 {
-    display: flex;
-    gap: 10px;
-}
-
-.check {
-    position: absolute;
-    z-index: 100;
-    display: flex;
-    gap: 10px;
-    bottom: 15%;
-    color: #fff;
-    left: 6%;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.check:hover {
-    color: #fff !important;
-}
-
-.hero-serv h1 {
-    background-color: var(--primary-color);
-    font-size: 30px;
-    padding: 5px;
-    transition: all 0.3s;
-}
-
-.hero-serv h1:hover {
-    background-color: #4A4A4C;
-    color: #fff;
-    cursor: pointer;
-}
-
 /* Custom Scrollbar for Webkit Browsers */
 ::-webkit-scrollbar {
     width: 5px;
@@ -214,21 +167,16 @@ a:hover {
     display: none;
 }
 
-/* For Firefox */
 html {
     scrollbar-width: thin;
-    /* Width of the scrollbar */
     scrollbar-color: #ffff0f #000;
-    /* Color of the handle and track */
 }
 
 body {
     scrollbar-width: thin;
-    /* Adjust scrollbar width */
     scrollbar-color: var(--primary-color) #000;
-    /* Handle and track color for Firefox */
 }
-.section-1 {
+.section {
     width: 100%;
     padding: 40px 70px;
 }
@@ -258,18 +206,77 @@ body {
     position: relative;
     box-shadow: 0px -1px 5px #000 !important;
     top: -8px;
+    white-space: nowrap;
 }
-.sec-1-vid {
+.brands {
     display: flex;
-    width: 100%;
-    gap: 30px;
+    gap: 20px;
 }
 
-.sec-1-vid video {
+.service-name {
     width: 50%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
 }
 
+.service-name img {
+    width: 100% !important;
+}
+
+.service-name img:nth-child(1),
+.service-name img:nth-child(1) {
+    width: auto !important; /* Ensure the logos maintain their specified width */
+}
+
+.daraz img:nth-child(2),
+.service-name img:nth-child(2) {
+    width: auto; /* Ensure the second images maintain their original width */
+}
+
+.daraz img,
+.service-name img {
+    max-width: 100%; /* Ensure images do not overflow their container */
+}
+.icon-box {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    border: 1px solid #000 !important;
+    cursor: pointer;
+  }
+  
+  .icon-box i {
+    float: left !important;
+    color: #000 !important;
+    font-size: 40px !important;
+    line-height: 0 !important;
+  }
+  
+  .icon-box h2 {
+    margin-left: 70px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+ .icon-box h2 a {
+    color: #000 !important;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+ .icon-box:hover h2 a {
+    color: #ffff0f !important;
+  }
+  
+  .icon-box p {
+    margin-left: 70px;
+    line-height: 24px;
+    font-size: 14px;
+  }
 
 @media (max-width: 1024px) {
     nav {
@@ -301,44 +308,10 @@ body {
         top: -10px;
         left: 40px;
     }
-
-    .hero-serv {
-        bottom: 3%;
-        padding: 0 40px;
-    }
-
-    .check {
-        bottom: 18%;
-        font-size: 15px;
-    }
-
-    .hero-serv h1 {
-        font-size: 25px;
-    }
 }
 @media (max-width:991px) {
     .none{
         display: none;
-    }
-}
-@media (max-width: 850px) {
-    .hero-serv {
-        flex-direction: column;
-        width: 100%;
-        bottom: 0;
-        left: 1%;
-        padding: 0 40px;
-    }
-
-    .serv-1,
-    .serv-2 {
-        gap: 20px;
-    }
-
-    .hero-serv h1 {
-        width: 100%;
-        text-align: center;
-        height: 40px;
     }
 }
 
@@ -348,22 +321,22 @@ body {
         align-items: flex-start;
         padding: 20px 20px;
     }
-
+    
     .part-1 h1 {
         font-size: 40px;
     }
-
+    
     .part-2 {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
-
+    
     .hero-head {
         top: 26%;
         left: 5%;
     }
-
+    
     .hero-head h1:nth-child(1) {
         width: 100%;
         font-size: 40px;
@@ -380,18 +353,13 @@ body {
         top: -5px;
         left: 20px;
     }
-
-    .hero-serv {
-        bottom: 2%;
+    .brands {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .check {
-        bottom: 20%;
-        font-size: 14px;
-    }
-
-    .hero-serv h1 {
-        font-size: 20px;
+    
+    .service-name{
+        width: 100%;
     }
 }
 
@@ -399,11 +367,8 @@ body {
     .navbar{
         padding: 10px 10px !important;
     }
-    .hero{
-        height: 150vh !important;
-    }
     .hero-head {
-        top: 22%;
+        top: 30%;
         left: 8%;
     }
     .hero-text-1{
@@ -417,26 +382,14 @@ body {
         font-size: 50px !important;
         width: 58% !important;
     }
-
-    .hero-serv{
-        padding: 0 30px;   
-    }
-    .serv-1,
-    .serv-2 {
-        flex-direction: column;
-    }
-    .hero-serv h1{
-        font-size: 30px;
-        height: 45px;
-    }
-    .check{
-        top: 58%;
-    }
-    .sec-1-vid {
-        flex-direction: column;
-    }
-    .sec-1-vid video{
+    .sec-1-img img{
         width: 100%;
+    }
+    .sec-1-text1{
+        font-size: 50px;
+    }
+    .sec-1-text2{
+        font-size: 65px;
     }
 }
 
@@ -444,19 +397,21 @@ body {
     .part-1 h1 {
         font-size: 35px;
     }
-
     .hero-head {
-        top: 26%;
+        top: 33%;
         left: 6%;
+    }
+    .hero-head h1{
+        flex-wrap: wrap;
     }
 
     .hero-head h1:nth-child(1) {
         width: 30% !important;
-        font-size: 36px !important;
+        font-size: 45px !important;
     }
-
+    
     .hero-head h1:nth-child(2) {
-        font-size: 55px !important;
+        font-size: 75px !important;
         top: -5px;
         left: 40px !important;
     }
@@ -465,28 +420,24 @@ body {
         width: 75% !important;
         top: -5px;
         left: 200px !important;
-        font-size: 40px !important;
+        font-size: 55px !important;
     }
-
-    .hero-serv {
-        bottom: 0;
-        padding: 0 20px;
-    }
-
-    .check {
-        bottom: 25%;
-        font-size: 15px;
-    }
-    .section-1{
+    .section{
         padding: 30px 20px;
+    }
+    .sec-1-text1{
+        font-size: 45px;
+    }
+    .sec-1-text2{
+        font-size: 55px;
+    }
+    .service-name img {
+        width: auto !important;
     }
 }
 @media (max-width:380px) {
-    .hero{
-        height: 100vh;
-    }
     .hero-head {
-        top: 27%;
+        top: 36%;
         left: 6%;
     }
 
@@ -507,10 +458,10 @@ body {
         left: 150px !important;
         font-size: 35px !important;
     }
-    .serv-2 h1:nth-child(1){
-        height: 80px;
+    .sec-1-text1{
+        font-size: 35px;
     }
-    .serv-2 h1:nth-child(2){
-        height: 80px;
+    .sec-1-text2{
+        font-size: 45px;
     }
 }
