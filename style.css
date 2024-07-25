@@ -88,7 +88,7 @@ a:hover {
 
 .hero-text-1 {
     width: 27% !important;
-    box-shadow: 0px 10px 5px !important;
+    box-shadow: 0px 1px 5px !important;
     z-index: 50 !important;
     color: #000 !important;
 }
@@ -97,7 +97,7 @@ a:hover {
     font-size: 120px !important;
     position: relative !important;
     top: -10px !important;
-    box-shadow: 0px 10px 5px !important;
+    box-shadow: 0px 1px 5px !important;
     z-index: 25 !important;
     left: 40px !important;
     color: #000 !important;
@@ -119,14 +119,14 @@ a:hover {
 .hero-head h1:nth-child(2) {
     font-size: 120px;
     position: relative;
-    top: -10px;
+    top: -25px;
     left: 40px;
 }
 
 .hero-head h1:nth-child(3) {
     width: 70%;
     position: relative;
-    top: -15px;
+    top: -20px !important;
     left: 230px;
     font-size: 70px;
 }
@@ -138,7 +138,6 @@ a:hover {
     gap: 10px;
     bottom: 5%;
     left: 6%;
-    flex-wrap: wrap;
     padding: 0 20px;
     color: #000 !important;
 }
@@ -226,9 +225,51 @@ html {
 body {
     scrollbar-width: thin;
     /* Adjust scrollbar width */
-    scrollbar-color: #ffff0f #000;
+    scrollbar-color: var(--primary-color) #000;
     /* Handle and track color for Firefox */
 }
+.section-1 {
+    width: 100%;
+    padding: 40px 70px;
+}
+
+.sec-1-head{
+    width: 100% !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.sec-1-head h1{
+    color: #000 !important;
+    background-color: var(--primary-color) !important;
+    padding: 3px !important;
+    font-family: "Oswald", sans-serif;
+}
+.sec-1-text1{
+    font-size: 60px;
+    z-index: 2 !important;
+}
+.sec-1-text2{
+    font-size: 80px;
+    z-index: 10 !important;
+    position: relative;
+    box-shadow: 0px -1px 5px #000 !important;
+    top: -8px;
+}
+.sec-1-vid {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.sec-1-vid video {
+    width: 50%;
+    height: auto;
+}
+
 
 @media (max-width: 1024px) {
     nav {
@@ -362,7 +403,7 @@ body {
         height: 150vh !important;
     }
     .hero-head {
-        top: 17%;
+        top: 22%;
         left: 8%;
     }
     .hero-text-1{
@@ -391,6 +432,12 @@ body {
     .check{
         top: 58%;
     }
+    .sec-1-vid {
+        flex-direction: column;
+    }
+    .sec-1-vid video{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -399,7 +446,7 @@ body {
     }
 
     .hero-head {
-        top: 22%;
+        top: 26%;
         left: 6%;
     }
 
@@ -430,13 +477,16 @@ body {
         bottom: 25%;
         font-size: 15px;
     }
+    .section-1{
+        padding: 30px 20px;
+    }
 }
 @media (max-width:380px) {
     .hero{
         height: 100vh;
     }
     .hero-head {
-        top: 22%;
+        top: 27%;
         left: 6%;
     }
 
