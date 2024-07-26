@@ -1,0 +1,14 @@
+.services{
+    position: relative;
+    top: 120px;
+    padding: 20px 40px;
+}
+h1{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+}
+h1 span{
+    border-bottom: 3px solid #ffff0f;
+    padding-bottom: 10px;
+}
