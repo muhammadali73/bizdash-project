@@ -1,14 +1,99 @@
-.services{
+.services {
     position: relative;
     top: 120px;
     padding: 20px 40px;
 }
-h1{
+
+h1 {
     text-transform: uppercase;
-    font-family: sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 100px;
+}
+
+h1 span {
+    border-bottom: 3px solid #ffff0f;
+    padding-bottom: 5px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px 140px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    margin-top: 20px;
+    height: 350px !important;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    height: 70%;
+}
+
+.card-content {
+    padding: 20px;
     text-align: center;
 }
-h1 span{
-    border-bottom: 3px solid #ffff0f;
-    padding-bottom: 10px;
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card h2 {
+    color: #000 !important;
+}
+
+.card p {
+    color: #000 !important;
+}
+
+@media (max-width:1024px) {
+    .card-container {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:580px) {
+    .card-container {
+        padding: 20px;
+    }
+
+    .card {
+        height: 300px !important;
+    }
+}
+
+@media (max-width:420px) {
+    .card-container {
+        padding: 20px 0;
+    }
 }
