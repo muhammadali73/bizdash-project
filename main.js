@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     tl.from(".hero-head h1:nth-child(1)", { scaleX: 0, delay: 0.3 })
       .from(".hero-head h1:nth-child(2)", { scaleX: 0, delay: 0.3 })
       .from(".hero-head h1:nth-child(3)", { scaleX: 0, delay: 0.3 });
+      var video = document.getElementById('myVideo');
+              video.controls = false;
+              video.setAttribute('playsinline', '');
+              video.play();
 });
-var video = document.getElementById('myVideo');
-        video.controls = false;
-        video.setAttribute('playsinline', '');
-        video.play();
