@@ -13,10 +13,6 @@
     justify-content: space-around;
   }
   
-  .hunt-vid{
-    height: 100%;
-    width: 100%;
-  }
   .hunting{
     font-size: 20px;
     font-weight: bold;
@@ -26,18 +22,50 @@
     justify-content: center;
     height: 500px;
     position: relative;
-    top: 50px;
+    top: 40px;
   }
-  .hunting p{
+  .hunting span{
     background-color: #ffff0f;
-    padding: 10px 15px;
   }
-
-  @media (max-width:580px) {
+  @media (max-width:991px) {
+    .hunting{
+      top: 70px;
+    }
+  }
+  @media (max-width:771px) {
     .counter-container{
       flex-direction: column;
     }
     .counter{
       margin-bottom: 30px;
+    }
+  }
+  @media (max-width:660px) {
+    .hunting{
+      top: 90px;
+      padding: 20px 30px;
+    }
+  }
+  @media (max-width:580px) {
+    .hunting{
+      padding: 20px 15px;
+    }
+  }
+  @media (max-width:500px) {
+    .hunting{
+      top: 120px;
+      padding: 20px 15px; 
+    }
+  }
+  @media (max-width:450px) {
+    .hunting{
+      top: 170px;
+      padding: 20px 15px; 
+    }
+  }
+  @media (max-width:380px) {
+    .hunting{
+      top: 240px;
+      padding: 20px 10px; 
     }
   }

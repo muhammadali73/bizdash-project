@@ -84,10 +84,3 @@ valueDisplay.forEach((valueDisplay) => {
         }
     }, duration);
 });
-var animation = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation'), // the DOM element that will contain the animation
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '../assets/Animation - 1722094514319.json' // the path to the animation json
-});
