@@ -69,6 +69,12 @@
   .card {
       height: 300px !important;
   }
+  .counter-container{
+    flex-direction: column;
+  }
+  .counter{
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width:420px) {

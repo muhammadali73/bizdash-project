@@ -267,11 +267,6 @@ body {
         left: 40px;
     }
 }
-@media (max-width:991px) {
-    .none{
-        display: none;
-    }
-}
 
 @media (max-width: 768px) {
     nav {

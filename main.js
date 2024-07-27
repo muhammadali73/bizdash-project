@@ -67,32 +67,20 @@ tl2.from(".head2", {
   }, "a1");
 }
 
-// Call the animation function
 section2Animation();
 
-// Example cursor animation (optional)
-var main = document.querySelector("body");
-var cursor = document.querySelector("#cursor");
-var buttonDiv = document.querySelector(".click");
+let valueDisplay = document.querySelectorAll(".num");
+let interval = 1500;
 
-main.addEventListener("mousemove", function (dets) {
-  gsap.to(cursor, {
-      x: dets.x,
-      y: dets.y,
-      duration: .3,
-      ease: "bounce2.out"
-  });
+valueDisplay.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute ("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function (){
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if(startValue == endValue){
+            clearInterval(counter);
+        }
+    }, duration);
 });
-
-buttonDiv.addEventListener("mouseenter", function () {
-  gsap.to(cursor, {
-      scale: 2,
-  });
-});
-
-buttonDiv.addEventListener("mouseleave", function () {
-  gsap.to(cursor, {
-      scale: 1,
-  });
-});
-
