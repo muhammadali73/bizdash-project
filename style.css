@@ -126,10 +126,16 @@ html {
 body {
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) #000;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 .section {
     width: 100%;
     padding: 40px 70px;
+    overflow: hidden;
 }
 
 .sec-1-head{

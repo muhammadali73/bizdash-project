@@ -13,7 +13,6 @@ a {
     transition: all 0.7s;
     color: #fff !important;
 }
-
 a:hover {
     color: var(--primary-color) !important;
 }
