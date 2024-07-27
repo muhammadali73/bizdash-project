@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Ensure you have included GSAP and ScrollTrigger in your project
 var tl = gsap.timeline();
-
 tl.from("nav li",{
     y:-30, 
     opacity:0,
     delay:1,
     duration:0.5,
+    stagger:0.15
 })
 // Function to set up scroll animations
 function section2Animation() {
