@@ -1,0 +1,43 @@
+.counter{
+    position: relative;
+    top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* style.css */
+  .counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .hunt-vid{
+    height: 100%;
+    width: 100%;
+  }
+  .hunting{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    position: relative;
+    top: 50px;
+  }
+  .hunting p{
+    background-color: #ffff0f;
+    padding: 10px 15px;
+  }
+
+  @media (max-width:580px) {
+    .counter-container{
+      flex-direction: column;
+    }
+    .counter{
+      margin-bottom: 30px;
+    }
+  }

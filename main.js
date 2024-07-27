@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // Ensure you have included GSAP and ScrollTrigger in your project
 var tl = gsap.timeline();
 tl.from("nav li",{
-    y:-30, 
+    y:-40, 
     opacity:0,
     delay:1,
-    duration:0.5,
-    stagger:0.15
+    duration:0.2,
+    stagger:0.1
 })
 // Function to set up scroll animations
 function section2Animation() {
@@ -70,7 +70,7 @@ tl2.from(".head2", {
 section2Animation();
 
 let valueDisplay = document.querySelectorAll(".num");
-let interval = 1500;
+let interval = 1000;
 
 valueDisplay.forEach((valueDisplay) => {
     let startValue = 0;
@@ -83,4 +83,11 @@ valueDisplay.forEach((valueDisplay) => {
             clearInterval(counter);
         }
     }, duration);
+});
+var animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'), // the DOM element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/Animation - 1722094514319.json' // the path to the animation json
 });
