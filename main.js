@@ -65,15 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, duration);
     });
-
-    // Preloader
+    
     let preloader = document.querySelector('#preloader');
     if (preloader) {
-        window.addEventListener('load', () => {
             console.log("Window loaded, removing preloader");
-            preloader.remove();
-        });
+            setTimeout(() => {
+                preloader.remove();
+            }, 2000); // Keep the preloader for 2 seconds
     } else {
         console.log("Preloader not found");
     }
 });
+    // Preloader
