@@ -17,12 +17,13 @@
     font-size: 20px;
     font-weight: bold;
     padding: 20px 70px;
+    line-height: 1.6;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
     position: relative;
-    top: 40px;
+    top: 20px;
   }
   .hunting span{
     background-color: #ffff0f;
@@ -39,6 +40,9 @@
     .counter{
       margin-bottom: 30px;
     }
+    .hunting{
+      height: 600px;
+    }
   }
   @media (max-width:660px) {
     .hunting{
@@ -49,23 +53,26 @@
   @media (max-width:580px) {
     .hunting{
       padding: 20px 15px;
+      height: 700px;
     }
   }
   @media (max-width:500px) {
     .hunting{
-      top: 120px;
+      top: 50px;
       padding: 20px 15px; 
     }
   }
   @media (max-width:450px) {
     .hunting{
-      top: 170px;
+      top: 65px;
+      height: 800px;
       padding: 20px 15px; 
     }
   }
   @media (max-width:380px) {
     .hunting{
-      top: 240px;
-      padding: 20px 10px; 
+      top: 120px;
+      padding: 10px 10px; 
+      height: 1050px;
     }
   }
