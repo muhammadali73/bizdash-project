@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shopify.css">
     <link rel="stylesheet" href="../assets/shareCss/navbar.css">
+    <link rel="stylesheet" href="../assets/shareCss/footer.css">
+    <link rel="icon" href="../assets/logos.png" sizes="512x512">
     <script src="https://kit.fontawesome.com/e0b303d7ec.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +39,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">ABOUT</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SERVICES</a>
-                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          SERVICES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                          <li><a class="dropdown-item" href="../WebDev/webdev.html">Web Development</a></li>
+                          <li><a class="dropdown-item" href="../Daraz/daraz.html">Daraz Lauches</a></li>
+                          <li><a class="dropdown-item" href="./shopify.html">Shopify Launches</a></li>
+                          <li><a class="dropdown-item" href="../Hunting/hunting.html">Product Hunting</a></li>
+                        </ul>
+                      </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">CLIENTS</a>
                     </li>
@@ -80,6 +90,54 @@
         <div class="card">
                 <img src="../assets/shopify-sa.jpg" alt="daraz">
         </div>
+        </div>
+            <!-- ======= Footer ======= -->
+    <footer id="footer" style="position: relative; top: 130px;">
+        <div class="footer-top" id="contact">
+          <div class="container-fluid">
+            <div class="row">
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <div class="footer-info">
+                  <h1 style="color: #ffff0f;">BIZDASH</h1>
+                  <p>
+                      Room no 233 , Hbl academic block , Iba city campus Karachi, Karachi, Pakistan<br><br>
+                    <strong>Phone:</strong> +92 3253926440<br>
+                    <strong>Email:</strong> thebizdash@gmail.com<br>
+                  </p>
+                  <div class="social-links mt-5">
+                    <a href="https://www.facebook.com/profile.php?id=61562972622329" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/thebizdash/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>  
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h2>Our Services</h2>
+                <ul>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="../WebDev/webdev.html"> &nbsp;&nbsp;Web Development</a></li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="../Daraz/daraz.html"> &nbsp;&nbsp;Daraz Lauches</a></li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="./shopify.html"> &nbsp;&nbsp;Shopify launches</a></li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="../Hunting/hunting.html"> &nbsp;&nbsp;Product Hunting</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+              <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=iba%20city%20campus&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            </div>
+          </div>
+          </div>
+      </div>
+      <div class="container-fluid" style="color: #fff; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="copyright">
+          &copy; Copyright <strong><a style="text-decoration: none;" href="#"><span>BizDash</span></a></strong>. All Rights Reserved @2024
+        </div>
+        <div class="credits">
+          Designed by <a href="https://github.com/muhammadali73" target="_blank" style="font-weight: bolder; text-decoration: none;">Muhammad Ali</a>
+        </div>
+      </div>
+  </footer><!-- End Footer -->
+    
+      <div id="preloader"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
             integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>

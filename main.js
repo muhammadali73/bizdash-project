@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // GSAP Animations
     const tl = gsap.timeline({ defaults: { ease: "power1.inOut", duration: 0.3 } });
-    tl.from(".hero-head h1:nth-child(1)", { scaleX: 0, delay: 0.3 })
+    tl.from(".hero-head h1:nth-child(1)", { scaleX: 0, delay: 2 })
       .from(".hero-head h1:nth-child(2)", { scaleX: 0, delay: 0.3 })
       .from(".hero-head h1:nth-child(3)", { scaleX: 0, delay: 0.3 });
 
@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Navigation Animation
     var navTimeline = gsap.timeline();
-    navTimeline.from("nav li", {
+    navTimeline.from("nav .nav-item", {
         y: -40,
         opacity: 0,
-        delay: 1,
+        delay: 2,
         duration: 0.2,
         stagger: 0.1
     });
@@ -68,12 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let preloader = document.querySelector('#preloader');
     if (preloader) {
+        setTimeout(() => {
             console.log("Window loaded, removing preloader");
-            setTimeout(() => {
-                preloader.remove();
-            }, 2000); // Keep the preloader for 2 seconds
+            preloader.remove();
+        }, 1500); // 2 seconds delay
     } else {
         console.log("Preloader not found");
     }
 });
-    // Preloader

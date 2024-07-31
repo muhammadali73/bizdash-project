@@ -7,7 +7,9 @@
     <title>BizDash - E-commerce Agency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./assets/shareCss/navbar.css">
+    <link rel="stylesheet" href="./assets/shareCss/footer.css">
     <script src="https://kit.fontawesome.com/e0b303d7ec.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/logos.png" sizes="512x512">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -24,7 +26,7 @@
 
 <body class="body">
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid">
                 <h1><a class="navbar-brand" href="./index.html">BIZDASH</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,9 +42,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">ABOUT</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">SERVICES</a>
-                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              SERVICES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                              <li><a class="dropdown-item" href="./WebDev/webdev.html">Web Development</a></li>
+                              <li><a class="dropdown-item" href="./Daraz/daraz.html">Daraz Lauches</a></li>
+                              <li><a class="dropdown-item" href="./Shopify/shopify.html">Shopify Launches</a></li>
+                              <li><a class="dropdown-item" href="./Hunting/hunting.html">Product Hunting</a></li>
+                            </ul>
+                          </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">CLIENTS</a>
                         </li>
@@ -86,28 +96,24 @@
         <div class="row" data-aos="fade-up" data-aos-delay="200">
             <div class="col-md-6 left1">
                 <div class="icon-box">
-                    <i class="bi bi-briefcase"></i>
                     <h2><a href="./WebDev/webdev.html">WEB DEVELOPMENT</a></h2>
                     <p>We offer web development services, responsive websites tailored to your business needs, ensuring optimal user experiences.</p>
                 </div>
             </div>
             <div class="col-md-6 mt-4 mt-md-0 right1">
                 <div class="icon-box">
-                    <i class="bi bi-laptop"></i>
                     <h2><a href="./Daraz/daraz.html">DARAZ LAUNCHES</a></h2>
                     <p>We launch Daraz stores from scratch, expertly hunting, sourcing, and ranking products to ensure your store's success and visibility.</p>
                 </div>
             </div>
             <div class="col-md-6 mt-4 mt-md-0 left2">
                 <div class="icon-box">
-                    <i class="bi bi-bar-chart"></i>
                     <h2><a href="./Shopify/shopify.html">SHOPIFY</a></h2>
                     <p>We launch complete Shopify stores from scratch, including web development, marketing, product research, and brand building.</p>
                 </div>
             </div>
             <div class="col-md-6 mt-4 mt-md-0 right2">
                 <div class="icon-box">
-                    <i class="bi bi-brightness-high"></i>
                     <h2><a href="./Hunting/hunting.html">PRODUCT HUNTING</a></h2>
                     <p>We specialize in product hunting, market research, competitor analysis, and demand checking of products for Shopify and Daraz.</p>
                 </div>
@@ -126,7 +132,7 @@
             </div>
         </div>
   
-    </main><!-- End #main -->
+    </div><!-- End #main -->
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="footer-top" id="contact">
@@ -163,7 +169,7 @@
         </div>
         </div>
     </div>
-    <div class="container" style="color: #fff; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div class="container-fluid" style="color: #fff; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
       <div class="copyright">
         &copy; Copyright <strong><a style="text-decoration: none;" href="#"><span>BizDash</span></a></strong>. All Rights Reserved @2024
       </div>
