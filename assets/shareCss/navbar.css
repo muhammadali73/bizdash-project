@@ -23,7 +23,7 @@ a:hover {
    transition: all 0.5s;
 }
 .dropdown-item:hover{
-    background-color: #000 !important;
+    background-color: transparent !important;
     transform: translateX(10px);
 }
 .navbar-toggler {
