@@ -65,13 +65,13 @@
                     }
                 }, duration);
             });
-        }, 2000); // 2 seconds delay
+        }, 1500); // 2 seconds delay
         
         let preloader = document.querySelector('#preloader');
         if (preloader) {
             setTimeout(() => {
                 preloader.remove();
-            }, 1500); // 2 seconds delay
+            }, 1000); // 2 seconds delay
         } else {
             console.log("Preloader not found");
         }
