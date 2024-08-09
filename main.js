@@ -71,7 +71,7 @@
         if (preloader) {
             setTimeout(() => {
                 preloader.remove();
-            }, 1000); // 2 seconds delay
+            }, 1200); // 2 seconds delay
         } else {
             console.log("Preloader not found");
         }
