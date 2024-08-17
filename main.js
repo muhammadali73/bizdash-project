@@ -2,7 +2,7 @@
 
         // GSAP Animations
         const tl = gsap.timeline({ defaults: { ease: "power1.inOut", duration: 0.3 } });
-        tl.from(".hero-head h1:nth-child(1)", { scaleX: 0, delay: 2 })
+        tl.from(".hero-head h1:nth-child(1)", { scaleX: 0, delay: 1.7 })
         .from(".hero-head h1:nth-child(2)", { scaleX: 0, delay: 0.3 })
         .from(".hero-head h1:nth-child(3)", { scaleX: 0, delay: 0.3 });
 
@@ -19,7 +19,7 @@
         navTimeline.from("nav .nav-item", {
             y: -40,
             opacity: 0,
-            delay: 2,
+            delay: 1.7,
             duration: 0.2,
             stagger: 0.1
         });
